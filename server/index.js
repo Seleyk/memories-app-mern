@@ -10,8 +10,6 @@ import postRoutes from './routes/posts.js';
 // initialize express app
 const app = express();
 
-// middleware
-app.use('/post', postRoutes);
 
 // properly send request
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
@@ -19,6 +17,9 @@ app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 
 // enable cross origin
 app.use(cors());
+
+// middleware
+app.use('/post', postRoutes);
 
 // Database connecion 
 // TODO: PLEASE MAKE SURE YOU MOVE THIS TO A GIT IGNORED ENV FILE BEFORE DEPLOYMENT
