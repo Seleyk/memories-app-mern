@@ -5,7 +5,6 @@ import { useDispatch } from 'react-redux';
 
 import useStyles from './styles';
 import { createPost } from "../../actions/posts";
-import e from "cors";
 
 const Form = () => {
     const [postData, setPostData] = useState ({ creator: '', title: '', message: '', tags: '', selectedFile: '' });
