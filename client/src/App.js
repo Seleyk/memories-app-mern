@@ -22,7 +22,6 @@ const App = () => {
         dispatch(getPosts());
     }, [currentId, dispatch]);
 
-
     return (
         <Container maxwidth='lg'>
             <AppBar className={classes.appBar} position="static" color="inherit">
