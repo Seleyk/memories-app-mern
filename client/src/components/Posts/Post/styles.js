@@ -32,6 +32,7 @@ export default makeStyles({
     top: '20px',
     right: '20px',
     color: 'white',
+    borderRadius: '50px',
   },
   grid: {
     display: 'flex',
