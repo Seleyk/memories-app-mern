@@ -10,7 +10,6 @@ import postRoutes from './routes/posts.js';
 // initialize express app
 const app = express();
 
-
 // properly send request
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));

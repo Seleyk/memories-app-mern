@@ -14,7 +14,6 @@ export const getPost = async (req, res) => {
 
 }
 
-
 // making a new post
 export const createPost = async (req, res) => {
     const post = req.body;
@@ -23,8 +22,8 @@ export const createPost = async (req, res) => {
 
     try {
         await newPost.save();
-
         res.status(201).json(newPost);
+        
     } catch (error) {
         res.status(409).json({ message: error.message })
     }
@@ -37,7 +36,6 @@ export const updatePost = async (req, res) => {
 
     if(!mongoose.Types.ObjectId.isValid(_id)) return res.status(404).send('Memory not found');
 
-    
     const updatedPost = await PostMessage.findByIdAndUpdate(_id, { ...post, _id }, { new: true });
 
     res.json(updatedPost);
